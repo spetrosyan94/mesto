@@ -1,0 +1,9 @@
+.elements__item-container {
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 241px;
+  gap: 45px;
+  margin: auto;
+
+}
