@@ -11,7 +11,7 @@
   margin-bottom: 67px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .elements__card-list {
     margin-bottom: 48px;
   }

@@ -29,3 +29,6 @@
 @import url(../blocks/elements/__item-container/elements__item-container.css);
 @import url(../blocks/elements/__text/elements__text.css);
 @import url(../blocks/elements/__like-btn/elements__like-btn.css);
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyright.css/footer__copyright.css);

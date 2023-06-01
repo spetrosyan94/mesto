@@ -1,0 +1,14 @@
+.footer {
+  max-width: 880px;
+  min-width: 282px;
+  box-sizing: border-box;
+  margin-bottom: 60px;
+  margin-left: 0;
+}
+
+@media (max-width: 576px) {
+  .footer {
+    margin: auto;
+    margin-bottom: 36px;
+  }
+}
