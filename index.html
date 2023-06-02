@@ -18,17 +18,25 @@
   <main class="content">
 
     <div class="profile">
-
       <div class="profile__info">
         <img class="profile__avatar" src="./images/profile-avatar.png" alt="изображение аватара автора">
         <div class="profile__text">
           <h1 class="profile__author">Жак-Ив Кусто</h1>
           <p class="profile__subtitle">Исследователь океана</p>
-
         </div>
         <input class="profile__edit-button" type="submit" value=""></input>
       </div>
       <input class="profile__add-button" type="submit" value=""></input>
+    </div>
+
+    <div class="popup">
+      <form class="popup__form" method="get" name="popupform">
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <input class="popup__input popup__input_type_name" name="popup-name" type="text">
+        <input class="popup__input popup__input_type_job" name="popup-job" type="text">
+        <button class="popup__submit-btn" type="submit">Сохранить</button>
+        <button class="popup__close-btn" type="submit"></button>
+      </form>
     </div>
 
     <div class="elements">
@@ -37,7 +45,7 @@
           <img class="elements__image" src="./images/elementst-karachaevsk.png" alt="фото карачаевска">
           <div class="elements__item-container">
             <p class="elements__text">Карачаевск</p>
-            <button class="elements__like-btn elements__like-btn_active"></button>
+            <button class="elements__like-btn"></button>
           </div>
         </li>
 

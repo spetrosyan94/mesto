@@ -5,11 +5,13 @@
   height: 50px;
   background: url("../../../images/profile-add-button.svg");
   background-repeat: no-repeat;
+  /* убрать белый фон background-color у инпута */
+  background-color: transparent;
   background-position: center;
   align-self: center;
-  border: none;
   border: 2px solid #FFFFFF;
   border-radius: 2px;
+  cursor: pointer;
   transition: opacity .3s linear;
 }
 

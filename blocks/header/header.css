@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   padding-top: 45px;
-  box-shadow: 0 0 0 1px red;
 }
 
 @media (max-width: 768px) {

@@ -1,6 +1,14 @@
 .profile__text {
   display: flex;
+  margin-right: 18px;
   flex-direction: column;
-  box-shadow: 0 0 0 2px rgb(21, 245, 1);
-  width: 100%;
+  /* width: 100%; */
+  overflow: hidden;
+  max-width: 68%;
+}
+
+@media (max-width: 768px) {
+  .profile__text {
+    margin-right: 0;
+  }
 }

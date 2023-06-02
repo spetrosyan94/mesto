@@ -1,12 +1,16 @@
 .profile__edit-button {
+  padding: 0;
+  margin: 0;
+  border: none;
   width: 24px;
   height: 24px;
+  margin-bottom: 23px;
+  background-image: url("../../../images/profile-edit-button.svg");
+  background-size: cover;
   background-repeat: no-repeat;
-  background: url("../../../images/profile-edit-button.svg");
-  position: absolute;
-  right: 0;
-  top: 35px;
-  border: none;
+  /* убрать белый фон background-color у инпута */
+  background-color: transparent;
+  cursor: pointer;
   transition: opacity .3s linear;
 }
 
@@ -16,7 +20,10 @@
 
 @media (max-width: 768px) {
   .profile__edit-button {
-    top: 150px;
-
+    position: absolute;
+    top: 155px;
+    right: 19px;
+    width: 18px;
+    height: 18px;
   }
 }

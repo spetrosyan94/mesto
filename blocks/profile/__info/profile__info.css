@@ -1,11 +1,9 @@
 .profile__info {
-  box-shadow: 0 0 0 1px rgb(0, 57, 243);
   display: flex;
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  /* max-width: 486px; */
-  width: 55.2%;
+  width: 80%;
   box-sizing: border-box;
 }
 

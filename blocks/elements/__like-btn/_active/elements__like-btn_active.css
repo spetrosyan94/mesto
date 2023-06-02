@@ -1,3 +1,4 @@
 .elements__like-btn_active {
   background-image: url("../../../../images/elements-like-btn-active.svg");
+  transition: background-image .2s ease-in;
 }
