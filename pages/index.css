@@ -10,7 +10,6 @@
 @import url(../blocks/header/__line/header__line.css);
 
 @import url(../blocks/content/content.css);
-@import url(../blocks/content/__container/content__container.css);
 
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/profile/__avatar/profile__avatar.css);

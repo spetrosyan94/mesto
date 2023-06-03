@@ -41,3 +41,13 @@ function handleFormSubmit(evt) {
 // Прикрепляем обработчик к форме:
 // он будет следить за событием “submit” - «отправка»
 formElement.addEventListener('submit', handleFormSubmit);
+
+
+// Функция действия нажатия на кнопку лайк
+// let like_btn = document.querySelectorAll('.elements__like-btn');
+
+// function like_elements() {
+//   like_btn.classList.toggle('elements__like-btn_active');
+// }
+
+// like_btn.addEventListener('click', like_elements);
