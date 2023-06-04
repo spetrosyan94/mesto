@@ -1,5 +1,13 @@
 .header__logo {
-  padding-bottom: 41px;
+  /* box-sizing: border-box; */
+  /* padding-bottom: 41px;
+  margin-bottom: 40px; */
+}
+
+@media (max-width: 878px) {
+  .header__logo {
+    padding-left: 50px;
+  }
 }
 
 @media (max-width: 768px) {

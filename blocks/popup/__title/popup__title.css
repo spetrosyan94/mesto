@@ -9,7 +9,6 @@
   line-height: 1.2;
   color: #000000;
   align-self: start;
-  margin-left: 36px;
 }
 
 @media (max-width: 576px) {
@@ -17,6 +16,6 @@
     font-size: 18px;
     margin-top: 26px;
     margin-bottom: 75px;
-    margin-left: 21px;
+    margin-left: 0px;
   }
 }

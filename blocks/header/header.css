@@ -1,15 +1,19 @@
 .header {
+  box-sizing: border-box;
   max-width: 880px;
   min-width: 320px;
-  box-sizing: border-box;
   margin: auto;
   display: flex;
   flex-direction: column;
-  padding-top: 45px;
+  padding-top: 44px;
+  border-bottom: 1px solid rgba(84, 84, 84, .7);
+  padding-bottom: 39px;
+  margin-bottom: 43px;
 }
 
 @media (max-width: 768px) {
   .header {
     padding-top: 28px;
+    padding-bottom: 0;
   }
 }

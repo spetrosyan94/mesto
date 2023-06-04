@@ -12,95 +12,96 @@
 
   <header class="header">
     <img class="header__logo logo" src="./images/header-logo.svg" alt="логотип mesto">
-    <div class="header__line"></div>
   </header>
 
   <main class="content">
 
-    <div class="profile">
+    <section class="profile">
       <div class="profile__info">
         <img class="profile__avatar" src="./images/profile-avatar.png" alt="изображение аватара автора">
         <div class="profile__text">
           <h1 class="profile__author">Жак-Ив Кусто</h1>
           <p class="profile__subtitle">Исследователь океана</p>
         </div>
-        <input class="profile__edit-button" type="submit" value="">
+        <button class="profile__edit-button" type="button" value=""></button>
       </div>
-      <input class="profile__add-button" type="submit" value="">
+      <button class="profile__add-button" type="button" value=""></button>
 
-    </div>
+    </section>
 
-    <div class="elements">
-      <ul class="elements__card-list">
-        <li class="elements__card">
-          <img class="elements__image" src="./images/elementst-karachaevsk.png" alt="фото карачаевска">
-          <div class="elements__item-container">
-            <p class="elements__text">Карачаевск</p>
-            <button class="elements__like-btn"></button>
+    <section class="elements">
+      <ul class="cards">
+        <li class="cards__item">
+          <img class="cards__image" src="./images/elementst-karachaevsk.png" alt="фото карачаевска">
+          <div class="cards__item-container">
+            <h2 class="cards__text">Карачаевск</h2>
+            <button class="cards__like-btn" type="button" aria-label="Лайк"></button>
           </div>
         </li>
 
-        <li class="elements__card">
-          <img class="elements__image" src="./images/elementst-elbrus-1.png" alt="фото горы эльбрус">
-          <div class="elements__item-container">
-            <p class="elements__text">Гора Эльбрус</p>
-            <button class="elements__like-btn"></button>
+        <li class="cards__item">
+          <img class="cards__image" src="./images/elementst-elbrus-1.png" alt="фото горы эльбрус">
+          <div class="cards__item-container">
+            <h2 class="cards__text">Гора Эльбрус</h2>
+            <button class="cards__like-btn" type="button" aria-label="Лайк"></button>
           </div>
         </li>
 
-        <li class="elements__card">
-          <img class="elements__image" src="./images/elementst-dombai.png" alt="фото домбаи">
-          <div class="elements__item-container">
-            <p class="elements__text">Домбай</p>
-            <button class="elements__like-btn"></button>
+        <li class="cards__item">
+          <img class="cards__image" src="./images/elementst-dombai.png" alt="фото домбаи">
+          <div class="cards__item-container">
+            <h2 class="cards__text">Домбай</h2>
+            <button class="cards__like-btn" type="button" aria-label="Лайк"></button>
           </div>
         </li>
 
-        <li class="elements__card">
-          <img class="elements__image" src="./images/elementst-elbrus-2.jpg" alt="фото горы эльбрус">
-          <div class="elements__item-container">
-            <p class="elements__text">Гора Эльбрус</p>
-            <button class="elements__like-btn"></button>
+        <li class="cards__item">
+          <img class="cards__image" src="./images/elementst-elbrus-2.jpg" alt="фото горы эльбрус">
+          <div class="cards__item-container">
+            <h2 class="cards__text">Гора Эльбрус</h2>
+            <button class="cards__like-btn" type="button" aria-label="Лайк"></button>
           </div>
         </li>
 
-        <li class="elements__card">
-          <img class="elements__image" src="./images/elementst-karachaevo-cherkesskaya resp.jpg"
+        <li class="cards__item">
+          <img class="cards__image" src="./images/elementst-karachaevo-cherkesskaya-resp.jpg"
             alt="фото карачаево-черкесской республики">
-          <div class="elements__item-container">
-            <p class="elements__text">Карачаево-Черкесская Республика</p>
-            <button class="elements__like-btn"></button>
+          <div class="cards__item-container">
+            <h2 class="cards__text">Карачаево-Черкесская Республика</h2>
+            <button class="cards__like-btn" type="button" aria-label="Лайк"></button>
           </div>
         </li>
 
-        <li class="elements__card">
-          <img class="elements__image" src="./images/elementst-mys-ostriy.jpg" alt="фото мыс острый">
-          <div class="elements__item-container">
-            <p class="elements__text">Мыс Острый</p>
-            <button class="elements__like-btn"></button>
+        <li class="cards__item">
+          <img class="cards__image" src="./images/elementst-mys-ostriy.jpg" alt="фото мыс острый">
+          <div class="cards__item-container">
+            <h2 class="cards__text">Мыс Острый</h2>
+            <button class="cards__like-btn" type="button" aria-label="Лайк"></button>
           </div>
         </li>
 
       </ul>
-    </div>
+    </section>
 
-    <div class="popup">
+  </main>
+
+  <footer class="footer">
+    <p class="footer__copyright">© 2023. Петросян Сергей</p>
+  </footer>
+
+  <div class="popup">
+    <div class="popup__container">
       <form class="popup__form" method="get" name="popupform">
         <h2 class="popup__title">Редактировать профиль</h2>
         <input class="popup__input popup__input_type_name" name="popup-name" type="text">
         <input class="popup__input popup__input_type_job" name="popup-job" type="text">
         <button class="popup__submit-btn" type="submit">Сохранить</button>
-        <button class="popup__close-btn" type="submit"></button>
+        <button class="popup__close-btn " type="button"></button>
       </form>
     </div>
+  </div>
 
-    <footer class="footer">
-      <p class="footer__copyright">© 2023. Петросян Сергей</p>
-    </footer>
-
-  </main>
-
-  <script src="index.js"></script>
+  <script src="./scripts/index.js"></script>
 </body>
 
 </html>

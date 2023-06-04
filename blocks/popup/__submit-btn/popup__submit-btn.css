@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   margin-top: 18px;
+  margin-bottom: 37px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -29,5 +30,6 @@
     width: 238px;
     height: 46px;
     margin-top: 14px;
+    margin-bottom: 25px;
   }
 }

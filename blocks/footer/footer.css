@@ -6,11 +6,20 @@
   margin-left: 0;
   display: flex;
   justify-content: flex-start;
+  margin: auto;
+}
 
+@media (max-width: 878px) {
+  .footer {
+    padding-left: 50px;
+    margin: auto;
+    margin-bottom: 36px;
+  }
 }
 
 @media (max-width: 576px) {
   .footer {
+    padding-left: 20px;
     margin: auto;
     margin-bottom: 36px;
   }

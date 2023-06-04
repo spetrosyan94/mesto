@@ -4,9 +4,9 @@
   margin: 0;
   width: 32px;
   height: 32px;
-  position: absolute;
-  top: -40px;
-  right: -40px;
+  position: relative;
+  bottom: 371px;
+  left: 239px;
   background-image: url("../../../images/popup-close-btn.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -24,7 +24,7 @@
   .popup__close-btn {
     width: 20px;
     height: 20px;
-    top: -35px;
-    right: 0;
+    bottom: 358px;
+    left: 131px;
   }
 }
