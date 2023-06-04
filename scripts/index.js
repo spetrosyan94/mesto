@@ -44,11 +44,15 @@ formElement.addEventListener('submit', handleFormSubmit);
 popupButtonOpen.addEventListener('click', openPopup);
 popupButtonClose.addEventListener('click', closePopup);
 
-// Функция действия нажатия на кнопку лайк
-// let like_btn = document.querySelectorAll('.elements__like-btn');
+// // Функция действия нажатия на кнопку лайк
+// let likeButtons = document.querySelectorAll('.cards__like-btn');
 
-// function like_elements() {
-//   like_btn.classList.toggle('elements__like-btn_active');
+// function likeElements() {
+//   likeButtons.classList.toggle('cards__like-btn_active');
 // }
 
-// like_btn.addEventListener('click', like_elements);
+// // likeButtons.addEventListener('click', likeElements);
+
+
+// [...likeButtons].forEach(likeButton =>
+//   likeButton.addEventListener('click', likeElements));
