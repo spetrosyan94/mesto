@@ -5,6 +5,8 @@
   width: 24px;
   height: 24px;
   margin-bottom: 23px;
+  padding-right: 50px;
+  flex-shrink: 0;
   background-image: url("../../../images/profile-edit-button.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -20,6 +22,7 @@
 
 @media (max-width: 768px) {
   .profile__edit-button {
+    padding-right: 0;
     position: absolute;
     top: 155px;
     right: 19px;
