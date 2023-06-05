@@ -7,13 +7,10 @@
   width: 430px;
   border-radius: 10px;
   z-index: 11;
-  margin-bottom: 98px;
-
 }
 
 @media (max-width: 576px) {
   .popup__container {
     width: 282px;
-    margin-bottom: 250px;
   }
 }
