@@ -4,10 +4,10 @@
   margin-bottom: 51px;
 }
 
-@media (max-width: 878px) {
+@media (max-width: 1024px) {
   .profile {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 

@@ -1,12 +1,8 @@
-.header__logo {
-  /* box-sizing: border-box; */
-  /* padding-bottom: 41px;
-  margin-bottom: 40px; */
-}
+.header__logo {}
 
-@media (max-width: 878px) {
+@media (max-width: 1024px) {
   .header__logo {
-    padding-left: 50px;
+    padding-left: 40px;
   }
 }
 
