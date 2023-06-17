@@ -1,0 +1,23 @@
+.cards__delete-btn {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  flex-shrink: 0;
+  background-image: url('../../../images/cards-delete-btn.svg');
+  /* убрать белый фон background-color у инпута */
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 18px;
+  height: 19px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: opacity .2s linear;
+}
+
+.cards__delete-btn:hover {
+  opacity: 0.5;
+}

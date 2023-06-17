@@ -26,12 +26,11 @@
         <button class="profile__edit-button" type="button" value=""></button>
       </div>
       <button class="profile__add-button" type="button" value=""></button>
-
     </section>
 
     <section class="elements">
       <ul class="cards">
-        <li class="cards__item">
+        <!-- <li class="cards__item">
           <img class="cards__image" src="./images/elements-karachaevsk.png" alt="фото карачаевска">
           <div class="cards__item-container">
             <h2 class="cards__text">Карачаевск</h2>
@@ -78,7 +77,7 @@
             <h2 class="cards__text">Мыс Острый</h2>
             <button class="cards__like-btn" type="button" aria-label="Лайк"></button>
           </div>
-        </li>
+        </li> -->
 
       </ul>
     </section>
@@ -91,7 +90,15 @@
 
   <div class="popup">
     <div class="popup__container">
-      <form class="popup__form" method="get" name="popupform">
+      <form class="popup__form popup_type_profile-info" method="get" name="popupform">
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <input class="popup__input popup__input_type_name" name="popup-name" type="text">
+        <input class="popup__input popup__input_type_job" name="popup-job" type="text">
+        <button class="popup__submit-btn" type="submit">Сохранить</button>
+        <button class="popup__close-btn " type="button"></button>
+      </form>
+
+      <form class="popup__form popup_type_add-cards" method="get" name="popupform">
         <h2 class="popup__title">Редактировать профиль</h2>
         <input class="popup__input popup__input_type_name" name="popup-name" type="text">
         <input class="popup__input popup__input_type_job" name="popup-job" type="text">
@@ -100,6 +107,17 @@
       </form>
     </div>
   </div>
+
+  <template id="cards-item-template">
+    <li class="cards__item">
+      <img class="cards__image" src="" alt="Изображение данной карточки">
+      <div class="cards__item-container">
+        <h2 class="cards__text"></h2>
+        <button class="cards__like-btn" type="button" aria-label="Лайк"></button>
+        <button class="cards__delete-btn" type="button" aria-label="Удалить"></button>
+      </div>
+    </li>
+  </template>
 
   <script src="./scripts/index.js"></script>
 </body>
