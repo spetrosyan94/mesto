@@ -30,55 +30,7 @@
 
     <section class="elements">
       <ul class="cards">
-        <!-- <li class="cards__item">
-          <img class="cards__image" src="./images/elements-karachaevsk.png" alt="фото карачаевска">
-          <div class="cards__item-container">
-            <h2 class="cards__text">Карачаевск</h2>
-            <button class="cards__like-btn" type="button" aria-label="Лайк"></button>
-          </div>
-        </li>
-
-        <li class="cards__item">
-          <img class="cards__image" src="./images/elements-elbrus-1.png" alt="фото горы эльбрус">
-          <div class="cards__item-container">
-            <h2 class="cards__text">Гора Эльбрус</h2>
-            <button class="cards__like-btn" type="button" aria-label="Лайк"></button>
-          </div>
-        </li>
-
-        <li class="cards__item">
-          <img class="cards__image" src="./images/elements-dombai.png" alt="фото домбаи">
-          <div class="cards__item-container">
-            <h2 class="cards__text">Домбай</h2>
-            <button class="cards__like-btn" type="button" aria-label="Лайк"></button>
-          </div>
-        </li>
-
-        <li class="cards__item">
-          <img class="cards__image" src="./images/elements-elbrus-2.jpg" alt="фото горы эльбрус">
-          <div class="cards__item-container">
-            <h2 class="cards__text">Гора Эльбрус</h2>
-            <button class="cards__like-btn" type="button" aria-label="Лайк"></button>
-          </div>
-        </li>
-
-        <li class="cards__item">
-          <img class="cards__image" src="./images/elements-karachaevo-cherkesskaya-resp.jpg"
-            alt="фото карачаево-черкесской республики">
-          <div class="cards__item-container">
-            <h2 class="cards__text">Карачаево-Черкесская Республика</h2>
-            <button class="cards__like-btn" type="button" aria-label="Лайк"></button>
-          </div>
-        </li>
-
-        <li class="cards__item">
-          <img class="cards__image" src="./images/elements-mys-ostriy.jpg" alt="фото мыс острый">
-          <div class="cards__item-container">
-            <h2 class="cards__text">Мыс Острый</h2>
-            <button class="cards__like-btn" type="button" aria-label="Лайк"></button>
-          </div>
-        </li> -->
-
+        <!-- В разметку будут добавляться карточки из JS -->
       </ul>
     </section>
 
@@ -88,23 +40,35 @@
     <p class="footer__copyright">© 2023. Петросян Сергей</p>
   </footer>
 
-  <div class="popup">
+  <div class="popup popup_type_profile">
     <div class="popup__container">
-      <form class="popup__form popup_type_profile-info" method="get" name="popupform">
+      <form class="popup__form popup__form_type_profile" method="get" name="popupform-profile">
         <h2 class="popup__title">Редактировать профиль</h2>
         <input class="popup__input popup__input_type_name" name="popup-name" type="text">
         <input class="popup__input popup__input_type_job" name="popup-job" type="text">
         <button class="popup__submit-btn" type="submit">Сохранить</button>
-        <button class="popup__close-btn " type="button"></button>
+        <button class="popup__close-btn" type="button"></button>
       </form>
+    </div>
+  </div>
 
-      <form class="popup__form popup_type_add-cards" method="get" name="popupform">
-        <h2 class="popup__title">Редактировать профиль</h2>
-        <input class="popup__input popup__input_type_name" name="popup-name" type="text">
-        <input class="popup__input popup__input_type_job" name="popup-job" type="text">
-        <button class="popup__submit-btn" type="submit">Сохранить</button>
-        <button class="popup__close-btn " type="button"></button>
+  <div class="popup popup_type_cards">
+    <div class="popup__container">
+      <form class="popup__form popup__form_type_cards" method="get" name="popupform-cards">
+        <h2 class="popup__title">Новое место</h2>
+        <input class="popup__input popup__input_type_card-name" name="popup-name-locations" type="text"
+          placeholder="Название">
+        <input class="popup__input popup__input_type_image-link" name="popup-image" type="text"
+          placeholder="Ссылка на картинку">
+        <button class="popup__submit-btn" type="submit">Создать</button>
+        <button class="popup__close-btn" type="button"></button>
       </form>
+    </div>
+  </div>
+
+  <div class="popup popup_image">
+    <div class="popup__container">
+
     </div>
   </div>
 
