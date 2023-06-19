@@ -4,14 +4,6 @@
   margin-bottom: 51px;
 }
 
-/*
-@media (max-width: 1024px) {
-  .profile {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-} */
-
 @media (max-width: 768px) {
   .profile {
     flex-direction: column;

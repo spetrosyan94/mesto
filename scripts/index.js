@@ -1,3 +1,4 @@
+const page = document.querySelector('.page');
 const popupProfileButtonOpen = document.querySelector('.profile__edit-button');
 const popupButtonClose = document.querySelectorAll('.popup__close-btn');
 const popupCardButtonOpen = document.querySelector('.profile__add-button')
@@ -19,7 +20,13 @@ const cardLinkInput = document.querySelector('.popup__input_type_image-link');
 
 // Функция открытия попапа
 function openPopup(type) {
-  type.classList.add('popup_opened');
+  if (type.classList.contains('transition_close') === true) {
+    type.classList.remove('transition_close');
+    type.classList.add('transition_opened');
+  }
+  else {
+    type.classList.add('transition_opened');
+  }
 }
 
 // Функция заносит начальные данные из разметки в форму
@@ -34,20 +41,33 @@ function setProfileTextValue() {
   profileJobText.textContent = jobInput.value;
 }
 
+// Функция обнуления инпутов формы добавления карточки при открытии
 function setCardInputValue() {
   cardNameInput.value = '';
   cardLinkInput.value = '';
 }
 
-// Функция кнопки закрытия попап
+// Функция кнопки закрытия попапа
 function closePopup(type) {
-  type.classList.remove('popup_opened');
+  if (type.classList.contains('transition_opened') === true) {
+    type.classList.remove('transition_opened');
+    type.classList.add('transition_close');
+  }
+  else {
+    type.classList.add('transition_close');
+  }
 }
 
-// // Обработчик прячет попап окно при клике на фон
+// Функция отключения/включения горизонтального скролла
+function noScrollToggle() {
+  page.classList.toggle('no-scroll');
+}
+
+// Обработчик прячет попап окно при клике на фон
 document.addEventListener('click', function (evt) {
   const popup = evt.target.closest('.popup');
   if (popup && evt.target === popup) {
+    noScrollToggle();
     closePopup(popup);
   }
 });
@@ -59,6 +79,7 @@ function handleFormSubmit(evt) {
   evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
   // Так мы можем определить свою логику отправки.
   setProfileTextValue();
+  noScrollToggle();
   closePopup(popupProfile);
 }
 // Обработчик формы для добавления новой карточки
@@ -67,9 +88,9 @@ function addCardForm(evt) {
   const nameNewCard = cardNameInput.value;
   const LinkNewCard = cardLinkInput.value;
   renderCards(cardsListElement, { name: nameNewCard, link: LinkNewCard }, 'prepend');
+  noScrollToggle();
   closePopup(popupCards);
 }
-
 
 // Прикрепляем обработчик к форме:
 // он будет следить за событием “submit” - «отправка»
@@ -78,12 +99,14 @@ formElementCards.addEventListener('submit', addCardForm);
 
 // Обработчик открытия попапа и внесения данных из разметки в инпут
 popupProfileButtonOpen.addEventListener('click', function () {
+  noScrollToggle();
   setPopupInputValue();
   openPopup(popupProfile);
 });
 
 // Обработчик открытия попапа добавления карточки и обнуления значений инпутов
 popupCardButtonOpen.addEventListener('click', function () {
+  noScrollToggle();
   setCardInputValue();
   openPopup(popupCards);
 })
@@ -91,6 +114,7 @@ popupCardButtonOpen.addEventListener('click', function () {
 // // Обработчик закрытия попапа
 popupButtonClose.forEach(function (element) {
   element.addEventListener('click', function () {
+    noScrollToggle();
     closePopup(popupProfile) || closePopup(popupCards);
   });
 });
