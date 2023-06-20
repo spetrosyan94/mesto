@@ -47,7 +47,7 @@
         <input class="popup__input popup__input_type_name" name="popup-name" type="text">
         <input class="popup__input popup__input_type_job" name="popup-job" type="text">
         <button class="popup__submit-btn" type="submit">Сохранить</button>
-        <button class="popup__close-btn" type="button"></button>
+        <button class="popup__close-btn popup__close-btn_position_form" type="button"></button>
       </form>
     </div>
   </div>
@@ -61,13 +61,17 @@
         <input class="popup__input popup__input_type_image-link" name="popup-image" type="text"
           placeholder="Ссылка на картинку">
         <button class="popup__submit-btn" type="submit">Создать</button>
-        <button class="popup__close-btn" type="button"></button>
+        <button class="popup__close-btn popup__close-btn_position_form" type="button"></button>
       </form>
     </div>
   </div>
 
-  <div class="popup popup_image">
-    <div class="popup__container">
+  <div class="popup popup_type_image">
+    <div class="popup__image-container">
+      <button class="popup__close-btn popup__close-btn_position_image" type="button"></button>
+      <img class="popup__image-item" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg"
+        alt="">
+      <h2 class="popup__image-title">Название Название</h2>
 
     </div>
   </div>
