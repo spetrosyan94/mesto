@@ -18,3 +18,9 @@
 .cards__like-btn:hover {
   opacity: 0.5;
 }
+
+@media (max-width: 576px) {
+  .cards__like-btn:hover {
+    opacity: 1;
+  }
+}
