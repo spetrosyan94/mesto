@@ -11,7 +11,7 @@ const popupProfile = document.querySelector('.popup_type_profile');
 const popupCards = document.querySelector('.popup_type_cards');
 const popupImage = document.querySelector('.popup_type_image');
 // Находим форму в DOM
-const formElementProfle = document.querySelector('.popup__form_type_profile');
+const formElementProfile = document.querySelector('.popup__form_type_profile');
 const formElementCards = document.querySelector('.popup__form_type_cards');
 // Находим поля формы в DOM
 const nameInput = document.querySelector('.popup__input_type_name');
@@ -21,6 +21,9 @@ const cardLinkInput = document.querySelector('.popup__input_type_image-link');
 const cardsImage = document.querySelectorAll('.cards__image');
 const popupImageItem = document.querySelector('.popup__image-item');
 const popupImageName = document.querySelector('.popup__image-title')
+//Строка используется для сброса значения переменной
+// currentPopup после закрытия попапа
+let currentPopup = null;
 
 //Массив с карточками
 const initialCards = [
@@ -52,21 +55,32 @@ const initialCards = [
 
 // Функция открытия попапа
 function openPopup(type) {
-  if (type.classList.contains('transition_close') === true) {
+  if (type.classList.contains('transition_close')) {
     type.classList.remove('transition_close');
   }
   type.classList.add('transition_opened');
   noScrollToggle();
+  currentPopup = type;
+  type.addEventListener('keydown', keydownHandler);
 }
 
 // Функция кнопки закрытия попапа
 function closePopup(type) {
-  if (type.classList.contains('transition_opened') === true) {
+  if (type.classList.contains('transition_opened')) {
     type.classList.remove('transition_opened');
   }
   type.classList.add('transition_close');
   noScrollToggle();
+  currentPopup = null;
+  type.removeEventListener('keydown', keydownHandler);
 }
+
+// Коллбэк функция закрытия попапа на клавишу Esc
+const keydownHandler = (evt) => {
+  if (evt.key === 'Escape' && currentPopup !== null) {
+    closePopup(currentPopup);
+  }
+};
 
 // Функция отключения/включения горизонтального скролла
 function noScrollToggle() {
@@ -75,8 +89,10 @@ function noScrollToggle() {
 
 // Функция заносит начальные данные из разметки в форму
 function setPopupInputValue() {
+  const event = new Event('input');
   nameInput.value = profileAuthorText.textContent;
   jobInput.value = profileJobText.textContent;
+  nameInput.dispatchEvent(event);
 }
 
 // Функция вставляет текст из формы в разметку на странице
@@ -148,9 +164,12 @@ document.addEventListener('click', function (evt) {
   }
 });
 
+// Обработчик события закрытия попапа на клавишу Esc
+document.addEventListener('keydown', keydownHandler);
+
 // Прикрепляем обработчик к форме:
 // он будет следить за событием “submit” - «отправка»
-formElementProfle.addEventListener('submit', changeProfileInfoFormSubmit);
+formElementProfile.addEventListener('submit', changeProfileInfoFormSubmit);
 formElementCards.addEventListener('submit', addCardForm);
 
 // Обработчик открытия попапа и внесения данных из разметки в инпут
@@ -168,8 +187,8 @@ popupCardButtonOpen.addEventListener('click', function () {
 // // Обработчик закрытия попапа
 popupButtonClose.forEach(function (element) {
   element.addEventListener('click', function () {
-    const closeElement = element.closest('.popup');
-    closePopup(closeElement);
+    const currentPopupForClose = element.closest('.popup');
+    closePopup(currentPopupForClose);
   });
 });
 

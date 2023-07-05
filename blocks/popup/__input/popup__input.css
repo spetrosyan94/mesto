@@ -19,3 +19,7 @@
     width: 238px;
   }
 }
+
+.popup__input:focus {
+  outline: none;
+}
