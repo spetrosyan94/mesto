@@ -30,7 +30,7 @@ function disabledButton(buttonElement, config) {
 }
 
 // Функция активации кнопки
-function enableButton(buttonElement) {
+function enableButton(buttonElement, config) {
   buttonElement.disabled = false;
   buttonElement.classList.remove(config.inactiveButtonClass);
 }
