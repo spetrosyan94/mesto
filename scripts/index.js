@@ -22,7 +22,6 @@ const cardLinkInput = document.querySelector('.popup__input_type_image-link');
 const cardsImage = document.querySelectorAll('.cards__image');
 const popupImageItem = document.querySelector('.popup__image-item');
 const popupImageName = document.querySelector('.popup__image-title');
-const submitButton = document.querySelector('.popup__submit-btn');
 //Строка используется для сброса значения переменной
 // currentPopup после закрытия попапа
 let currentPopup = null;
@@ -57,9 +56,6 @@ const initialCards = [
 
 // Функция открытия попапа
 function openPopup(type) {
-  if (type.classList.contains('transition_close')) {
-    type.classList.remove('transition_close');
-  }
   type.classList.add('transition_opened');
   noScrollToggle();
   // Обработчик события закрытия попапа на клавишу Esc
@@ -69,10 +65,7 @@ function openPopup(type) {
 
 // Функция кнопки закрытия попапа
 function closePopup(type) {
-  if (type.classList.contains('transition_opened')) {
-    type.classList.remove('transition_opened');
-  }
-  type.classList.add('transition_close');
+  type.classList.remove('transition_opened');
   noScrollToggle();
   // Удаление обработчика события закрытия попапа на клавишу Esc
   currentPopup = null;
@@ -93,10 +86,10 @@ function noScrollToggle() {
 
 // Функция заносит начальные данные из разметки в форму
 function setPopupInputValue() {
-  const event = new Event('input');
+  const buttonSubmit = formElementProfile.querySelector('.popup__submit-btn');
   nameInput.value = profileAuthorText.textContent;
   jobInput.value = profileJobText.textContent;
-  nameInput.dispatchEvent(event);
+  enableButton(buttonSubmit, config);
 }
 
 // Функция вставляет текст из формы в разметку на странице
@@ -125,6 +118,7 @@ function addCardForm(evt) {
   const LinkNewCard = cardLinkInput.value;
   renderCards(cardsListElement, { name: nameNewCard, link: LinkNewCard }, 'prepend');
   closePopup(popupCards);
+
 }
 
 //Функция создания карточки
@@ -173,10 +167,10 @@ popupProfileButtonOpen.addEventListener('click', function () {
 
 // Обработчик открытия попапа добавления карточки и обнуления значений инпутов
 popupCardButtonOpen.addEventListener('click', function () {
+  const buttonSubmit = formElementCards.querySelector('.popup__submit-btn');
   clearCardFormInputs();
   openPopup(popupCards);
-  // submitButton.classList.add('popup__submit-btn_disabled');
-  // submitButton.disabled = 'disabled';
+  disabledButton(buttonSubmit, config);
 });
 
 // Проходит по всем попапам и закрывает попап, если клик произошел

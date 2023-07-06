@@ -27,6 +27,7 @@ function checkInputValidity(inputElement, formElement, config) {
 function disabledButton(buttonElement, config) {
   buttonElement.disabled = 'disabled';
   buttonElement.classList.add(config.inactiveButtonClass);
+  console.log('кнопка нажата');
 }
 
 // Функция активации кнопки
@@ -81,7 +82,7 @@ const config = {
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__submit-btn',
   inactiveButtonClass: 'popup__submit-btn_disabled',
-  inputErrorClass: 'popup__input_type_error',
-}
+  inputErrorClass: 'popup__input_type_error'
+};
 
 enableValidition(config);

@@ -11,5 +11,5 @@
   /* Стили для плавного перехода открытия попапа */
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
 }
