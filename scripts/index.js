@@ -1,9 +1,10 @@
 const page = document.querySelector('.page');
+const popups = document.querySelectorAll('.popup');
 const templateElement = document.querySelector('#cards-item-template').content.querySelector('.cards__item');
 const cardsListElement = document.querySelector('.cards');
 const popupProfileButtonOpen = document.querySelector('.profile__edit-button');
 const popupButtonClose = document.querySelectorAll('.popup__close-btn');
-const popupCardButtonOpen = document.querySelector('.profile__add-button')
+const popupCardButtonOpen = document.querySelector('.profile__add-button');
 const profileAuthorText = document.querySelector('.profile__author');
 const profileJobText = document.querySelector('.profile__subtitle');
 const popupContainer = document.querySelector('.popup__container');
@@ -20,7 +21,8 @@ const cardNameInput = document.querySelector('.popup__input_type_card-name');
 const cardLinkInput = document.querySelector('.popup__input_type_image-link');
 const cardsImage = document.querySelectorAll('.cards__image');
 const popupImageItem = document.querySelector('.popup__image-item');
-const popupImageName = document.querySelector('.popup__image-title')
+const popupImageName = document.querySelector('.popup__image-title');
+const submitButton = document.querySelector('.popup__submit-btn');
 //Строка используется для сброса значения переменной
 // currentPopup после закрытия попапа
 let currentPopup = null;
@@ -60,8 +62,9 @@ function openPopup(type) {
   }
   type.classList.add('transition_opened');
   noScrollToggle();
+  // Обработчик события закрытия попапа на клавишу Esc
   currentPopup = type;
-  type.addEventListener('keydown', keydownHandler);
+  document.addEventListener('keydown', closeByEscape);
 }
 
 // Функция кнопки закрытия попапа
@@ -71,16 +74,17 @@ function closePopup(type) {
   }
   type.classList.add('transition_close');
   noScrollToggle();
+  // Удаление обработчика события закрытия попапа на клавишу Esc
   currentPopup = null;
-  type.removeEventListener('keydown', keydownHandler);
+  document.removeEventListener('keydown', closeByEscape);
 }
 
 // Коллбэк функция закрытия попапа на клавишу Esc
-const keydownHandler = (evt) => {
+function closeByEscape(evt) {
   if (evt.key === 'Escape' && currentPopup !== null) {
     closePopup(currentPopup);
   }
-};
+}
 
 // Функция отключения/включения горизонтального скролла
 function noScrollToggle() {
@@ -156,17 +160,6 @@ function renderCards(container, data, position = 'append') {
   }
 }
 
-// Обработчик прячет попап окно при клике на фон
-document.addEventListener('click', function (evt) {
-  const popup = evt.target.closest('.popup');
-  if (popup && evt.target === popup) {
-    closePopup(popup);
-  }
-});
-
-// Обработчик события закрытия попапа на клавишу Esc
-document.addEventListener('keydown', keydownHandler);
-
 // Прикрепляем обработчик к форме:
 // он будет следить за событием “submit” - «отправка»
 formElementProfile.addEventListener('submit', changeProfileInfoFormSubmit);
@@ -182,15 +175,19 @@ popupProfileButtonOpen.addEventListener('click', function () {
 popupCardButtonOpen.addEventListener('click', function () {
   clearCardFormInputs();
   openPopup(popupCards);
+  // submitButton.classList.add('popup__submit-btn_disabled');
+  // submitButton.disabled = 'disabled';
 });
 
-// // Обработчик закрытия попапа
-popupButtonClose.forEach(function (element) {
-  element.addEventListener('click', function () {
-    const currentPopupForClose = element.closest('.popup');
-    closePopup(currentPopupForClose);
+// Проходит по всем попапам и закрывает попап, если клик произошел
+// на кнопке закрытия или за пределами попапа
+popups.forEach((popup) => {
+  popup.addEventListener('mousedown', (evt) => {
+    if (evt.target.classList.contains('popup') || evt.target.classList.contains('popup__close-btn')) {
+      closePopup(popup);
+    }
   });
-});
+})
 
 // Метод проходит по всему массиву и добавляет
 // новый элемент в блок Cards
