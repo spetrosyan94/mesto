@@ -27,7 +27,6 @@ function checkInputValidity(inputElement, formElement, config) {
 function disabledButton(buttonElement, config) {
   buttonElement.disabled = 'disabled';
   buttonElement.classList.add(config.inactiveButtonClass);
-  console.log('кнопка нажата');
 }
 
 // Функция активации кнопки

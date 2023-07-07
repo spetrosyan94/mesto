@@ -14,6 +14,7 @@ const popupImage = document.querySelector('.popup_type_image');
 // Находим форму в DOM
 const formElementProfile = document.querySelector('.popup__form_type_profile');
 const formElementCards = document.querySelector('.popup__form_type_cards');
+const formElement = document.querySelector('.popup__form');
 // Находим поля формы в DOM
 const nameInput = document.querySelector('.popup__input_type_name');
 const jobInput = document.querySelector('.popup__input_type_job');
@@ -26,6 +27,8 @@ const popupImageName = document.querySelector('.popup__image-title');
 // currentPopup после закрытия попапа
 let currentPopup = null;
 
+// const inputElement = document.querySelector('.popup__input');
+// const errorElement = document.querySelector(`#${inputElement.name}-error`);
 //Массив с карточками
 const initialCards = [
   {
@@ -58,17 +61,21 @@ const initialCards = [
 function openPopup(type) {
   type.classList.add('transition_opened');
   noScrollToggle();
-  // Обработчик события закрытия попапа на клавишу Esc
+  // Переменной currentPopup присваивается ссылка на текущий открытый попап
   currentPopup = type;
+  // Обработчик события закрытия попапа на клавишу Esc
   document.addEventListener('keydown', closeByEscape);
+  // Очситка инпутов выбранной формы от ошибок при открытии попапа
+  findFormAndHideErrorNew(currentPopup);
 }
 
 // Функция кнопки закрытия попапа
 function closePopup(type) {
   type.classList.remove('transition_opened');
   noScrollToggle();
-  // Удаление обработчика события закрытия попапа на клавишу Esc
+  // При закрытии попапа ссылка переменной currentPopup сбрасывается
   currentPopup = null;
+  // Удаление обработчика события закрытия попапа на клавишу Esc
   document.removeEventListener('keydown', closeByEscape);
 }
 
@@ -154,6 +161,21 @@ function renderCards(container, data, position = 'append') {
   }
 }
 
+// Функция в выбранной форме очищает сообщение об ошибке,
+// которое остаётся после закрытия попапа с невалидными инпутами
+function findFormAndHideErrorNew(currentPopup) {
+  const inputs = currentPopup.querySelectorAll('.popup__input');
+
+  inputs.forEach((input) => {
+    input.classList.remove(config.inputErrorClass);
+  });
+  const errors = currentPopup.querySelectorAll('.popup__error');
+
+  errors.forEach((error) => {
+    error.textContent = '';
+  });
+}
+
 // Прикрепляем обработчик к форме:
 // он будет следить за событием “submit” - «отправка»
 formElementProfile.addEventListener('submit', changeProfileInfoFormSubmit);
@@ -190,17 +212,17 @@ initialCards.forEach(function (item) {
 });
 
 // Обработчик действия нажатия на кнопку лайк
-cardsListElement.addEventListener('click', function (event) {
-  if (event.target.classList.contains('cards__like-btn')) {
-    event.target.classList.toggle('cards__like-btn_active');
+cardsListElement.addEventListener('click', function (evt) {
+  if (evt.target.classList.contains('cards__like-btn')) {
+    evt.target.classList.toggle('cards__like-btn_active');
   }
 });
 
 //Обработчик открытия изображения карточки в отдельный попап
-cardsListElement.addEventListener("click", evt => {
+cardsListElement.addEventListener('click', evt => {
   const clickedElement = evt.target;
 
-  if (clickedElement.classList.contains("cards__image")) {
+  if (clickedElement.classList.contains('cards__image')) {
     const src = clickedElement.src;
     const name = clickedElement.alt;
     popupImageItem.src = src;
