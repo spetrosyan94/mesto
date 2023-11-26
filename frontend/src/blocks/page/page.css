@@ -1,0 +1,16 @@
+.page {
+  background-color: #000000;
+  font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
+  /* Высота вида на весь экран */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  /* Базовые вендорные префиксы сглаживание и
+  масштабирования для шрифтов страницы .page в CSS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+}

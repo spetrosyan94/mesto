@@ -1,0 +1,9 @@
+.cards__item-container {
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 241px;
+  gap: 45px;
+  margin: auto;
+}

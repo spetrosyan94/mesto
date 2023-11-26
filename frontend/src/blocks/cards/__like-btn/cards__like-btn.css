@@ -1,0 +1,26 @@
+.cards__like-btn {
+  padding: 0;
+  margin: 0;
+  border: none;
+  flex-shrink: 0;
+  background-image: url("../../../images/cards-like-btn.svg");
+  /* убрать белый фон background-color у инпута */
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 22px;
+  height: 19px;
+  cursor: pointer;
+  transition: opacity .2s linear, background-image .2s ease-in;
+}
+
+.cards__like-btn:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .cards__like-btn:hover {
+    opacity: 1;
+  }
+}

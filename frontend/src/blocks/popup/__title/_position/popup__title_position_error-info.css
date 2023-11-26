@@ -1,0 +1,10 @@
+.popup__title_position_error-info {
+  align-self: center;
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  padding: 0;
+}

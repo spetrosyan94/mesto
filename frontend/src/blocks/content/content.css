@@ -1,0 +1,19 @@
+.content {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 960px;
+  min-width: 320px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+@media (max-width: 402px) {
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

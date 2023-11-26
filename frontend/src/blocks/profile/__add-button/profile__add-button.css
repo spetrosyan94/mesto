@@ -1,0 +1,35 @@
+.profile__add-button {
+  padding: 0;
+  margin: 0;
+  width: 150px;
+  height: 50px;
+  background-image: url("../../../images/profile-add-button-desktop.svg");
+  background-repeat: no-repeat;
+  /* убрать белый фон background-color у инпута */
+  background-color: transparent;
+  background-position: center;
+  align-self: center;
+  border: 2px solid #FFFFFF;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: opacity .3s linear;
+}
+
+.profile__add-button:hover {
+  opacity: 0.6;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .profile__add-button {
+    width: 88%;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile__add-button {
+    background-image: url("../../../images/profile-add-button-mobile.svg");
+  }
+}

@@ -1,0 +1,26 @@
+.burger-button {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s linear .5s;
+}
+
+
+@media (max-width: 576px) {
+  .burger-button {
+    visibility: visible;
+    display: flex;
+    opacity: 1;
+  }
+
+}

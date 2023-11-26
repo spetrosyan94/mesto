@@ -1,0 +1,20 @@
+.auth__title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 49px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #ffffff;
+  align-self: center;
+}
+
+@media (max-width: 576px) {
+  .auth__title {
+    font-size: 18px;
+    margin-top: 26px;
+    margin-bottom: 75px;
+    margin-left: 0px;
+  }
+}

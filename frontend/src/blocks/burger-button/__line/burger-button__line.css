@@ -1,0 +1,7 @@
+.burger-button__line {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  border: 2px solid rgb(255, 255, 255);
+}

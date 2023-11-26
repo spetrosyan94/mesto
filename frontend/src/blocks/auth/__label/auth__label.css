@@ -1,0 +1,9 @@
+.auth__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.auth__labe:last-child {
+  margin-bottom: 500px;
+}

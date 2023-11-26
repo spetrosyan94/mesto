@@ -1,0 +1,38 @@
+.header__login {
+  display: flex;
+  flex-direction: row;
+  gap: 0 24px;
+  box-sizing: border-box;
+  transform-origin: bottom;
+  transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out, visibility .3s ease-in-out;
+}
+
+
+@media (max-width: 959px) {
+  .header__login {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header__login {
+    visibility: hidden;
+    flex-direction: column;
+    align-items: center;
+    transform: scaleY(0);
+  }
+}
+
+.header__login_active {
+  display: flex;
+  padding-top: 44px;
+  transform: scaleY(1);
+  opacity: 1;
+
+  visibility: visible;
+  gap: 13px 0;
+  margin-bottom: 27px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(84, 84, 84, .7);
+}

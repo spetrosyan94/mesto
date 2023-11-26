@@ -1,0 +1,10 @@
+.popup__close-btn_position_header-menu {
+  position: static;
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .popup__close-btn_position_header-menu {
+    display: block;
+  }
+}

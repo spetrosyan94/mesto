@@ -1,0 +1,23 @@
+.header__email {
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+  color: #FFF;
+  text-align: right;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: text-decoration .3s ease-in-out;
+}
+
+.header__email:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .header__email {
+    font-size: 16px;
+  }
+}

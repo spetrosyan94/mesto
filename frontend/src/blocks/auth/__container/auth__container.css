@@ -1,0 +1,15 @@
+.auth__container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 430px;
+  border-radius: 10px;
+  z-index: 5;
+}
+
+@media (max-width: 576px) {
+  .auth__container {
+    width: 282px;
+  }
+}

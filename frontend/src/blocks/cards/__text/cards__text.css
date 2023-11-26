@@ -1,0 +1,15 @@
+.cards__text {
+  padding: 0;
+  margin: 0;
+  /* При редактировании данных профиля из попапа пользователь может ввести длинный текст.
+  Чтобы реализовать переполнение блока с появляющимся многоточием в конце, используйте такой набор свойств CSS */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #000000;
+}

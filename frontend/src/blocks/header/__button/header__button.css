@@ -1,0 +1,29 @@
+.header__button {
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+  border: none;
+  background-color: transparent;
+  color: #A9A9A9;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity .3s linear;
+  vertical-align: top;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+}
+
+.header__button:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .header__button {
+    font-size: 16px;
+  }
+}

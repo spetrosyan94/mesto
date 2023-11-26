@@ -1,0 +1,23 @@
+.profile__edit-avatar {
+  padding: 0;
+  margin: 0;
+  margin-right: 30px;
+  width: 120px;
+  position: relative;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.profile__edit-avatar:hover .profile__edit-element {
+  opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+  .profile__edit-avatar {
+    margin-right: 0
+  }
+}

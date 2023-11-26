@@ -1,0 +1,11 @@
+.popup__close-btn_position_edit-form {
+  bottom: 285px;
+  left: 239px;
+}
+
+@media (max-width: 576px) {
+  .popup__close-btn_position_edit-form {
+    bottom: 280px;
+    left: 132px;
+  }
+}
