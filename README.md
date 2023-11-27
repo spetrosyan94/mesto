@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.14.210
+IP-адрес 158.160.11.112
 
 Frontend https://mesto.petrosyan.nomoredomainsmonster.ru
 
