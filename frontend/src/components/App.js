@@ -77,7 +77,7 @@ function App() {
       api.getAllInfo()
         .then(([dataUser, cardsArray]) => {
           setUserCurrent(dataUser);
-          setCards(cardsArray);
+          setCards(cardsArray.reverse());
         })
         .catch((err) => console.log(err));
     };
@@ -93,7 +93,7 @@ function App() {
 
   // Эффект отключения скролла при открытом попапе
   React.useEffect(() => {
-    noScrollToggle();
+    noScrollToggle(isOpen);
   }, [isOpen]);
 
   // Эффект проверки токена пользователя при входе на сайт
@@ -378,7 +378,9 @@ function App() {
           {/* Компонент открытия изображения карточки */}
           <ImagePopup
             onClose={closeAllPopups}
-            card={selectedCard} >
+            card={selectedCard}
+            isOpen={isPopupImageOpen}
+          >
           </ImagePopup>
 
           {/* Компонент попапа удаления карточки */}

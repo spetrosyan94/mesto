@@ -10,10 +10,6 @@ const { errors } = require('celebrate');
 const centralErrorHandler = require('./middlewares/centralErrorHandler');
 const routes = require('./routes/index');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-// const { createUser, login } = require('./controllers/users');
-// const auth = require('./middlewares/auth');
-// const NotFoundError = require('./errors/NotFoundError');
-// const { signupValidate, signinValidate } = require('./middlewares/validation');
 
 const { PORT = 3000 } = process.env;
 

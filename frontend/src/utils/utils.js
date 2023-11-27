@@ -1,8 +1,11 @@
 import React from "react";
 
 // Функция отключения/включения горизонтального скролла
-export function noScrollToggle() {
-  document.body.classList.toggle('no-scroll');
+export function noScrollToggle(openPopup) {
+
+  openPopup
+    ? document.body.classList.add('no-scroll')
+    : document.body.classList.remove('no-scroll');
 }
 
 // Метод получения токена из локального хранилища браузера

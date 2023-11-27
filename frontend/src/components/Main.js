@@ -29,7 +29,7 @@ function Main(props) {
         <ul className="cards">
           {/* В разметку будут добавляться карточки из JS */}
           {/* Компонент добавляющий объект карточки через итерацию массива с map */}
-          {props.cards.slice().reverse().map((card) => (
+          {props.cards.map((card) => (
             <Card
               card={card}
               key={card._id}
