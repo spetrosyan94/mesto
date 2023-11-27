@@ -278,7 +278,12 @@ function App() {
 
     api.editAvatar(url)
       .then((res) => {
-        setUserCurrent(res);
+        // Дополняем объект с данными пользователя обновленной ссылкой на аватар
+        setUserCurrent(prevUser => ({
+          ...prevUser,
+          avatar: res.avatar,
+        }));
+
         closeAllPopups();
       })
       .catch((err) => {
