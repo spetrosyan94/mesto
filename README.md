@@ -49,17 +49,11 @@
 
 - База данных на сервере MongoDB.
 
-- Сайт "Mesto" является учебным проектом, разработанным в рамках обучения на курсе "Веб-разработчик" от [Яндекс Практикум](https://practicum.yandex.ru/).
-
-- Ссылка проекта на GitHub Pages: [https://github.com/spetrosyan94/react-mesto-auth](https://github.com/spetrosyan94/react-mesto-auth)
-
-- [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?type=design&node-id=0-1&mode=design&t=GLKrvOxwA5loCYtx-0)
-
-## Дополнительная информация
-
 - В проекте использованы API для работы с фотографиями и пользователями. Для полноценной работы сайта, необходимо наличие доступа к интернету.
 
-- Сайт "Mesto" является учебным проектом, разработанным в рамках обучения на курсе "Веб-разработчик" от Яндекс Практикум.
+- Ссылка на проект: [https://mesto.petrosyan.nomoredomainsmonster.ru](https://mesto.petrosyan.nomoredomainsmonster.ru)
+
+- [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?type=design&node-id=0-1&mode=design&t=GLKrvOxwA5loCYtx-0)
 
 ## Возможные улучшения
 
