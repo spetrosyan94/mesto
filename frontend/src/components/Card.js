@@ -10,11 +10,10 @@ function Card(props) {
   // Определяем, являемся ли мы владельцем текущей карточки
   const isOwn = props.card.owner === userCurrent._id;
   // Определяем, есть ли у карточки лайк, поставленный текущим пользователем
-  const isLiked = props.card.likes.some((like) => { return like === userCurrent._id });
+  const isLiked = props.card.likes.some((id) => { return id === userCurrent._id });
   // Создаём переменную, которую после зададим в `className` для кнопки лайка
   const cardLikeButtonClassName = (
-    `cards__like-btn ${isLiked && 'cards__like-btn_active'}`
-  );
+    `cards__like-btn ${isLiked && 'cards__like-btn_active'}`);
 
   // Обработчик состояния включения и выключения анимации у кнопки лайка
   function handleAnimationLike() {

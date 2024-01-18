@@ -1,6 +1,4 @@
-// const BASE_URL = "https://auth.nomoreparties.co";
-const BASE_URL = "https://api.mesto.petrosyan.nomoredomainsmonster.ru";
-// const BASE_URL = "http://localhost:3000";
+import { BASE_URL } from "./constants.js";
 
 // Получение ответа от сервера в виде объекта, вернется либо успешный ответ от сервера,
 // либо обработанный объект с ошибкой, который перейдет в блок catch
@@ -54,6 +52,7 @@ export function checkToken() {
     .then(onResponse)
 }
 
+// Функция выхода из аккаунта пользователя и удаления куки
 export function signOut() {
   return fetch(`${BASE_URL}/signout`, {
     method: "GET",

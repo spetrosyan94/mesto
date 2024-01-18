@@ -6,7 +6,7 @@
 
 ## Скриншот
 
-![Desktop screenshot](./frontend/./screenshot/mesto-1.jpg)
+![Desktop screenshot](./frontend/screenshot/mesto-1.jpg)
 
 ## Функциональность
 
@@ -51,9 +51,9 @@
 
 - В проекте использованы API для работы с фотографиями и пользователями. Для полноценной работы сайта, необходимо наличие доступа к интернету.
 
-- Ссылка на проект: [https://mesto.petrosyan.nomoredomainsmonster.ru](https://mesto.petrosyan.nomoredomainsmonster.ru)
+<!-- - Ссылка на проект: [https://mesto.petrosyan.nomoredomainsmonster.ru](https://mesto.petrosyan.nomoredomainsmonster.ru) -->
 
-- [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?type=design&node-id=0-1&mode=design&t=GLKrvOxwA5loCYtx-0)
+<!-- - [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?type=design&node-id=0-1&mode=design&t=GLKrvOxwA5loCYtx-0) -->
 
 ## Возможные улучшения
 

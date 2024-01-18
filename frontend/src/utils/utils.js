@@ -13,6 +13,7 @@ export function getLocalStorage(key) {
   return localStorage.getItem(key)
 }
 
+// Функция закрытия попапа по Esc или вне области попапа
 export function usePopupClose(isOpen, closePopup) {
   React.useEffect(() => {
     // Проверяем, дейсвительно ли попап открыт. Если нет, прекращаем дальнейшие действия

@@ -17,6 +17,7 @@ const { PORT = 3000 } = process.env;
 mongoose.connect(DB_ADDRESS);
 
 const app = express();
+// Добавляет заголовки CORS ко всем ответам сервера
 app.use(cors({
   credentials: true,
   maxAge: 30, // Кэширование preFlight запросов
@@ -45,6 +46,7 @@ app.use(errorLogger);
 // обработчик ошибок celebrate
 app.use(errors());
 
+// централизованный обработчик ошибок
 app.use(centralErrorHandler);
 
 app.listen(PORT);

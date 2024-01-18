@@ -1,12 +1,12 @@
-import { configApi } from "./constants.js";
+import { BASE_URL } from "./constants.js";
 
 export class Api {
   #url;
   #headers;
 
-  constructor(config) {
-    this.#url = config.url;
-    this.#headers = config.headers;
+  constructor() {
+    this.#url = BASE_URL;
+    // this.#headers = config.headers;
   }
 
   // Получение ответа от сервера в виде объекта, вернется либо успешный ответ от сервера,
@@ -103,4 +103,4 @@ export class Api {
 }
 
 // Экземпляр класса для взаимодействия с сервером
-export const api = new Api(configApi);
+export const api = new Api();
