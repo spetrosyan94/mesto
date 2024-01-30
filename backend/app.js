@@ -32,11 +32,11 @@ app.use(requestLogger);
 app.use(express.json()); // для собирания JSON-формата
 app.use(cookieParser()); // парсер куки
 
-app.get('/crash-test', () => {
-  setTimeout(() => {
-    throw new Error('Сервер сейчас упадёт');
-  }, 0);
-});
+// app.get('/crash-test', () => {
+//   setTimeout(() => {
+//     throw new Error('Сервер сейчас упадёт');
+//   }, 0);
+// });
 
 app.use(routes);
 
